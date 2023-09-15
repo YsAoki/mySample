@@ -1,0 +1,95 @@
+import React from 'react'
+import Header from '../../03organisms/Header'
+
+const TopLayout = () => {
+  return (
+    <>
+      <Header />
+      <h1>sadfas</h1>
+      <h1>sadfas</h1>
+      <h1>sadfas</h1>
+      <h1>sadfas</h1>
+      <h1>sadfas</h1>
+      <h1>sadfas</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+      <h1>aaaa</h1>
+    </>
+  )
+}
+
+export default TopLayout
