@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
-import TitleText from "../../01atoms/TitleText";
-import Inner from "../../01atoms/Inner";
-import FlexBox from "../../01atoms/FlexBox";
-import RegularText from "../../01atoms/RegularText";
+import TitleText from "../../atoms/TitleText";
+import Inner from "../../atoms/Inner";
+import FlexBox from "../../atoms/FlexBox";
+import RegularText from "../../atoms/RegularText";
 
 export const SHeader = styled.header`
   position: fixed;

@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import RegularInput from "../../01atoms/RegularInput";
-import Label from "../../01atoms/Label";
+import RegularInput from "../../atoms/RegularInput";
+import Label from "../../atoms/Label";
 import { ChildrenProps } from "../../../types/types";
-import FlexBox from "../../01atoms/FlexBox";
+import FlexBox from "../../atoms/FlexBox";
 
 type Props = {
   id: string;
