@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import Box from "../../01atoms/Box";
+import Box from "../../atoms/Box";
 
 export const SForFixedBox = styled(Box)`
   margin-top: ${({theme: {size}}) => size.headerHeightSp};

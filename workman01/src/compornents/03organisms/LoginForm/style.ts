@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import TitleText from "../../01atoms/TitleText";
-import RegularInput from "../../01atoms/RegularInput";
+import TitleText from "../../atoms/TitleText";
+import RegularInput from "../../atoms/RegularInput";
 
 export const SForm = styled.form`
   padding: 30px 0;
