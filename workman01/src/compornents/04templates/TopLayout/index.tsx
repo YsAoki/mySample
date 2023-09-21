@@ -1,11 +1,12 @@
 import React, { FC, useEffect, useState } from "react";
 import axios from "axios";
-// import { useSelector } from 'redux-tool'; 
+// import { useSelector } from 'redux-tool';
 import { ShopProps } from "../../../types/types";
 import CardBox from "../../03organisms/CardBox";
+import ViewProductsLists from "../../03organisms/ViewProductList";
 
 const TopLayout: FC = () => {
-  const [List, setList] = useState<ShopProps[]>([]);
+  const [list, setList] = useState<ShopProps[]>([]);
   // const selectedId = useSelector(state => state.selectedId); // Reduxから選択されたIDを取得
 
   useEffect(() => {
@@ -20,22 +21,10 @@ const TopLayout: FC = () => {
       });
   }, []);
 
-  // 選択されたIDと一致する商品をフィルタリング
-  // const selectedProduct = List.filter(product => product.id === selectedId)[0];
-
   return (
     <>
-      <CardBox productList={List} />
-      <div>
-        {/* {selectedProduct ? (
-          <>
-            <h2>{selectedProduct.name}</h2>
-            <p>{selectedProduct.price}</p>
-          </>
-        ) : (
-          "商品が選択されていません"
-        )} */}
-      </div>
+      <CardBox productList={list} />
+      <ViewProductsLists productList={list} />
     </>
   );
 };

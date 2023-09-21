@@ -10,7 +10,7 @@ const LoginForm = () => {
 
   const onSubmitEvent = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    navigate("/top");
+    navigate("/");
   };
 
   return (
