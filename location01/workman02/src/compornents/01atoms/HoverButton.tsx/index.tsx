@@ -2,7 +2,12 @@ import React, { FC } from "react";
 import { SHoverButton } from "./style";
 import { ChildrenProps } from "../../../types/types";
 
-const HoverButton: FC<ChildrenProps> = ({ children, ...other }) => {
+type RegularButtonProps = React.ComponentPropsWithoutRef<"button">;
+
+const HoverButton: FC<RegularButtonProps & ChildrenProps> = ({
+  children,
+  ...other
+}) => {
   return <SHoverButton {...other}>{children}</SHoverButton>;
 };
 

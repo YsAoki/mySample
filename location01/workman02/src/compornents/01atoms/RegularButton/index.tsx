@@ -2,7 +2,12 @@ import React, { FC } from "react";
 import { SRegularButton } from "./style";
 import { ChildrenProps } from "../../../types/types";
 
-const RegularButton: FC<ChildrenProps> = ({ children, ...other }) => {
+type RegularButtonProps = React.ComponentPropsWithoutRef<"button">;
+
+const RegularButton: FC<RegularButtonProps & ChildrenProps> = ({
+  children,
+  ...other
+}) => {
   return <SRegularButton {...other}>{children}</SRegularButton>;
 };
 

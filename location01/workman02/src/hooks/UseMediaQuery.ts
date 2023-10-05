@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { theme } from '../themes/themes';
+import { theme } from '../theme/theme';
 
 export const useMediaQuery = () => {
 

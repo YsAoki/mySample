@@ -14,7 +14,7 @@ const CardBox: FC<Props> = ({ productList }) => {
   return (
     <SCardBox>
       {productList.map((val) => (
-        <Card id={val.id} name={val.name} price={val.price} />
+        <Card key={val.id} id={val.id} name={val.name} price={val.price} />
       ))}
     </SCardBox>
   );
