@@ -1,14 +1,15 @@
 import { styled } from "styled-components";
-import TitleText from "../../atoms/TitleText";
-import Inner from "../../atoms/Inner";
-import FlexBox from "../../atoms/FlexBox";
-import RegularText from "../../atoms/RegularText";
+import TitleText from "../../01atoms/TitleText";
+import Inner from "../../01atoms/Inner";
+import FlexBox from "../../01atoms/FlexBox";
+import RegularText from "../../01atoms/RegularText";
 
 export const SHeader = styled.header`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10000;
   /* 分割代入と、ブレイクポイントもthemeより取得する */
   background-color: ${({ theme: { color } }) => color.mainColor};
   /* breakpointsを、propsで表示する */

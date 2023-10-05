@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from "react";
 import { SForm, STitleText, SRegularInput } from "./style";
-import Label from "../../atoms/Label";
-import HoverButton from "../../atoms/HoverButton.tsx";
+import Label from "../../01atoms/Label";
+import HoverButton from "../../01atoms/HoverButton.tsx";
 import RadioButton from "../../02molecules/RadioButton";
 import { useNavigate } from "react-router-dom";
 

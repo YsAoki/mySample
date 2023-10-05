@@ -4,10 +4,15 @@ import axios from "axios";
 import { ShopProps } from "../../../types/types";
 import CardBox from "../../03organisms/CardBox";
 import ViewProductsLists from "../../03organisms/ViewProductList";
+import { useLocation } from "react-router-dom";
+import Header from "../../03organisms/Header";
+import FlexBox from "../../01atoms/FlexBox";
+import ForFixedBox from "../../02molecules/ForFixedBox";
+import SVGComponent from "../../../img/SVGComponent";
+import RadioButton from "../../01atoms/RadioButton";
 
 const TopLayout: FC = () => {
   const [list, setList] = useState<ShopProps[]>([]);
-  // const selectedId = useSelector(state => state.selectedId); // Reduxから選択されたIDを取得
 
   useEffect(() => {
     const url = "http://localhost:3000/products";
@@ -21,10 +26,40 @@ const TopLayout: FC = () => {
       });
   }, []);
 
+  const [selectedValue, setSelectedValue] = useState<string>('');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedValue(event.target.value);
+  };
+
   return (
     <>
-      <CardBox productList={list} />
-      <ViewProductsLists productList={list} />
+      <Header />
+      <ForFixedBox>
+      <div>
+      <RadioButton
+        name="example"
+        id="option1"
+        value="option1"
+        onChange={handleChange}
+        checked={selectedValue === 'option1'}
+      >
+        Option 1
+      </RadioButton>
+      <RadioButton
+        name="example"
+        id="option2"
+        value="option2"
+        onChange={handleChange}
+        checked={selectedValue === 'option2'}
+      >
+        Option 2
+      </RadioButton>
+    </div>
+        <FlexBox>
+          <CardBox productList={list} />
+        </FlexBox>
+      </ForFixedBox>
     </>
   );
 };

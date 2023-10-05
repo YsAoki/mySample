@@ -1,27 +1,20 @@
 import React, { FC } from "react";
 import { SCard } from "./style";
-import TitleText from "../../atoms/TitleText";
+import TitleText from "../../01atoms/TitleText";
 import { ShopProps } from "../../../types/types";
-import RegularText from "../../atoms/RegularText";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { addSelectedProductsId } from "../../../store/selectedProductsSlice";
+import RegularText from "../../01atoms/RegularText";
+import { useNavigate } from "react-router-dom";
 
 const Card: FC<ShopProps> = ({ id, name, price, ...other }) => {
 
-  const dispatch = useDispatch();
-
-  const selectedProductsId = useSelector(
-    (state: RootState) => state.selectedProducts.id
-  );
+  const navigate = useNavigate();
 
   const cardClickEvent = () => {
-    dispatch(addSelectedProductsId(id));
-    alert(id)
+    navigate(`${id}`);
   };
 
   return (
-    <SCard onClick={cardClickEvent} className={id === selectedProductsId ? "active" : ""} {...other}>
+    <SCard onClick={cardClickEvent} {...other}>
       <TitleText tag="h3">{name}</TitleText>
       <RegularText>{price}</RegularText>
     </SCard>
