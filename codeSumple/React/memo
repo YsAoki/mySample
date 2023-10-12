@@ -1,0 +1,12 @@
+const StarRating = () => {
+  const num = 5;
+  return (
+    <div>
+      {Array.from({ length: num }, (_, i) => i).map((_, index) => (
+        <span key={index}>⭐︎</span>
+      ))}
+    </div>
+  );
+};
+
+数値の数だけ繰り返し星の表示をする
