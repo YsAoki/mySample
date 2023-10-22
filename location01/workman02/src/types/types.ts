@@ -8,9 +8,14 @@ export type TagProps = {
 
 export type AllStyleProps = React.CSSProperties;
 
-export type ShopProps = {
-  id? :string;
-  name?: string;
-  price?: number;
-  detail?: string;
+export type ProductsList = {
+  id :string;
+  name: string;
+  price: number;
+  detail: string;
+  imageUrl: string;
+  isPopular: true;
+  startDate: string;
+  endDate: string;
+  company: string;
 }

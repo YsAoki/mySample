@@ -1,29 +1,37 @@
 import React, { FC, ChangeEvent } from "react";
-import { CheckboxInput, CustomCheckbox, CheckboxLabel } from "./style";
+import { CheckBoxLabel, CheckBoxInput, CustomCheckBox } from "./style";
 import { ChildrenProps } from "../../../types/types";
 
 type Props = {
   name: string;
   id: string;
   value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   checked: boolean;
+  children: React.ReactNode;
 };
 
-const CheckboxButton: FC<Props & ChildrenProps> = ({ name, id, value, onChange, checked, children }) => {
+const CheckBox: React.FC<Props> = ({
+  name,
+  id,
+  value,
+  onChange,
+  checked,
+  children,
+}) => {
   return (
-    <CheckboxLabel htmlFor={id}>
-      <CheckboxInput
+    <CheckBoxLabel htmlFor={id}>
+      <CheckBoxInput
         name={name}
         id={id}
         value={value}
         onChange={onChange}
         checked={checked}
       />
-      <CustomCheckbox />
+      <CustomCheckBox />
       {children}
-    </CheckboxLabel>
+    </CheckBoxLabel>
   );
 };
 
-export default CheckboxButton;
+export default CheckBox;

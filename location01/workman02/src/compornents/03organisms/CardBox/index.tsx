@@ -1,20 +1,18 @@
 // CardBox.tsx
 import React, { FC } from "react";
-import { ShopProps } from "../../../types/types";
 import { SCardBox } from "./style";
 import Card from "../../02molecules/Card";
-import { RootState } from "../../../store/store";
-import { useSelector } from "react-redux";
+import { ProductsList } from "../../../types/types";
 
 type Props = {
-  productList: ShopProps[];
+  productsList: ProductsList[];
 };
 
-const CardBox: FC<Props> = ({ productList }) => {
+const CardBox: FC<Props> = ({ productsList }) => {
   return (
     <SCardBox>
-      {productList.map((val) => (
-        <Card key={val.id} id={val.id} name={val.name} price={val.price} />
+      {productsList.map((val) => (
+        <Card productsData={val} key={val.id} />
       ))}
     </SCardBox>
   );

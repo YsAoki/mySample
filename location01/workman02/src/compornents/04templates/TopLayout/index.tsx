@@ -1,67 +1,52 @@
 import React, { FC, useEffect, useState } from "react";
-import axios from "axios";
-// import { useSelector } from 'redux-tool';
-import { ShopProps } from "../../../types/types";
-import CardBox from "../../03organisms/CardBox";
-import ViewProductsLists from "../../03organisms/ViewProductList";
-import { useLocation } from "react-router-dom";
 import Header from "../../03organisms/Header";
-import FlexBox from "../../01atoms/FlexBox";
 import ForFixedBox from "../../02molecules/ForFixedBox";
-import SVGComponent from "../../../img/SVGComponent";
-import RadioButton from "../../01atoms/RadioButton";
+import { ProductsList } from "../../../types/types";
+import CardBox from "../../03organisms/CardBox";
 
-const TopLayout: FC = () => {
-  const [list, setList] = useState<ShopProps[]>([]);
+type Props = {
+  productsList: ProductsList[];
+};
 
-  useEffect(() => {
-    const url = "http://localhost:3000/products";
-    axios
-      .get(url)
-      .then((response) => {
-        setList(response.data);
-      })
-      .catch((error) => {
-        console.error("データの取得に失敗:", error);
-      });
-  }, []);
-
-  const [selectedValue, setSelectedValue] = useState<string>('');
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
-  };
-
+const TopLayout: FC<Props> = ({ productsList }) => {
   return (
     <>
       <Header />
       <ForFixedBox>
-      <div>
-      <RadioButton
-        name="example"
-        id="option1"
-        value="option1"
-        onChange={handleChange}
-        checked={selectedValue === 'option1'}
-      >
-        Option 1
-      </RadioButton>
-      <RadioButton
-        name="example"
-        id="option2"
-        value="option2"
-        onChange={handleChange}
-        checked={selectedValue === 'option2'}
-      >
-        Option 2
-      </RadioButton>
-    </div>
-        <FlexBox>
-          <CardBox productList={list} />
-        </FlexBox>
+        {productsList && <CardBox productsList={productsList} />}
       </ForFixedBox>
     </>
   );
 };
 
 export default TopLayout;
+
+// const convertNumbersToNames = (numbers) => {
+//   const nameMapping = {
+//     1: '青木',
+//     2: '山田',
+//     3: '田中'
+//   };
+
+//   return numbers.map((number) => nameMapping[number] || '不明');
+// };
+
+// console.log(convertNumbersToNames([1, 2, 3]));  // 出力: ["青木", "山田", "田中"]
+// console.log(convertNumbersToNames([1, 3]));    // 出力: ["青木", "田中"]
+// console.log(convertNumbersToNames([4, 2]));    // 出力: ["不明", "山田"]
+
+
+// const filteredItems = items.filter(item => {
+//   if (selectedOptions1.length === 0 && selectedOptions2.length === 0 && selectedOptions3.length === 0) {
+//     // 何も選択されていない場合、全てのアイテムを返す
+//     return true;
+//   }
+  
+//   // それぞれの選択オプションに基づいてフィルタリング
+//   const match1 = selectedOptions1.length === 0 || selectedOptions1.includes(item.someProperty1);
+//   const match2 = selectedOptions2.length === 0 || selectedOptions2.includes(item.someProperty2);
+//   const match3 = selectedOptions3.length === 0 || selectedOptions3.includes(item.someProperty3);
+  
+//   // すべての条件がマッチした場合にtrueを返す
+//   return match1 && match2 && match3;
+// });

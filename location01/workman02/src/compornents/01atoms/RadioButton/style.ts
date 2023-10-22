@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const RadioInput = styled.input.attrs({ type: "radio" })`
   display: none;
   &:checked + span {
-    border: 2px solid #f4b400;
+    border: 2px solid black;
     &:after {
       opacity: 1;
     }
@@ -26,9 +26,10 @@ export const CustomRadio = styled.span`
     left: 50%;
     width: 10px;
     height: 10px;
-    background-color: #f4b400;
+    background-color: black;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.8s;
     opacity: 0;
   }
 `;
