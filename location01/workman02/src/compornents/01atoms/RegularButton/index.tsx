@@ -8,7 +8,11 @@ const RegularButton: FC<RegularButtonProps & ChildrenProps> = ({
   children,
   ...other
 }) => {
-  return <SRegularButton {...other}>{children}</SRegularButton>;
+  return (
+    <SRegularButton type="button" {...other}>
+      {children}
+    </SRegularButton>
+  );
 };
 
 export default RegularButton;
