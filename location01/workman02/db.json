@@ -20,7 +20,7 @@
       "isPopular": false,
       "startDate": "2021-02-15T00:00:00Z",
       "endDate": "2022-02-15T00:00:00Z",
-      "company": "Samsung"
+      "company": "Microsoft"
     },
     {
       "id": "g7h8i9",
@@ -42,7 +42,7 @@
       "isPopular": false,
       "startDate": "2021-03-03T00:00:00Z",
       "endDate": "2022-03-03T00:00:00Z",
-      "company": "Nintendo"
+      "company": "Microsoft"
     },
     {
       "id": "m4n5o6",
@@ -53,7 +53,7 @@
       "isPopular": true,
       "startDate": "2021-04-01T00:00:00Z",
       "endDate": "2022-04-01T00:00:00Z",
-      "company": "Dyson"
+      "company": "Sony"
     },
     {
       "id": "o7p8q9",
@@ -64,7 +64,7 @@
       "isPopular": false,
       "startDate": "2021-07-09T00:00:00Z",
       "endDate": "2022-07-09T00:00:00Z",
-      "company": "Canon"
+      "company": "Apple"
     },
     {
       "id": "r1s2t3",
@@ -75,7 +75,7 @@
       "isPopular": true,
       "startDate": "2021-01-01T00:00:00Z",
       "endDate": "2022-01-01T00:00:00Z",
-      "company": "Tesla"
+      "company": "Microsoft"
     },
     {
       "id": "u4v5w6",
@@ -86,7 +86,7 @@
       "isPopular": false,
       "startDate": "2021-06-15T00:00:00Z",
       "endDate": "2022-06-15T00:00:00Z",
-      "company": "Bose"
+      "company": "Sony"
     },
     {
       "id": "x7y8z9",
@@ -97,7 +97,7 @@
       "isPopular": true,
       "startDate": "2021-09-16T00:00:00Z",
       "endDate": "2022-09-16T00:00:00Z",
-      "company": "GoPro"
+      "company": "Microsoft"
     },
     {
       "id": "a4b5c6",
@@ -108,7 +108,7 @@
       "isPopular": false,
       "startDate": "2021-10-21T00:00:00Z",
       "endDate": "2022-10-21T00:00:00Z",
-      "company": "Amazon"
+      "company": "Apple"
     },
     {
       "id": "d7e8f9",
@@ -119,7 +119,7 @@
       "isPopular": true,
       "startDate": "2021-08-05T00:00:00Z",
       "endDate": "2022-08-05T00:00:00Z",
-      "company": "Fitbit"
+      "company": "Microsoft"
     },
     {
       "id": "g1h2i3",
@@ -130,7 +130,7 @@
       "isPopular": false,
       "startDate": "2021-12-01T00:00:00Z",
       "endDate": "2022-12-01T00:00:00Z",
-      "company": "JBL"
+      "company": "Microsoft"
     },
     {
       "id": "j4k5l6",
@@ -141,7 +141,7 @@
       "isPopular": true,
       "startDate": "2021-02-28T00:00:00Z",
       "endDate": "2022-02-28T00:00:00Z",
-      "company": "Instant Brands"
+      "company": "Sony"
     },
     {
       "id": "m7n8o9",
@@ -152,7 +152,7 @@
       "isPopular": false,
       "startDate": "2021-04-15T00:00:00Z",
       "endDate": "2022-04-15T00:00:00Z",
-      "company": "Nespresso"
+      "company": "Apple"
     },
     {
       "id": "p1q2r3",
@@ -163,7 +163,7 @@
       "isPopular": true,
       "startDate": "2021-07-01T00:00:00Z",
       "endDate": "2022-07-01T00:00:00Z",
-      "company": "Anker"
+      "company": "Sony"
     }
   ]
 }

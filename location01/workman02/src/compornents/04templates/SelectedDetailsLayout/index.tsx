@@ -8,6 +8,7 @@ const SelectedDetailsLayout = () => {
   return (
     <>
       <Header />
+      
       <SForFixedBox>
       </SForFixedBox>
     </>
