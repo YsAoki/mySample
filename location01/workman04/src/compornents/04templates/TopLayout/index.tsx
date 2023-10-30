@@ -27,8 +27,8 @@ const TopLayout: FC<Props> = ({ productsList }) => {
         <RegularButton onClick={openSearchModalEvent}>
           絞り込み画面を開く
         </RegularButton>
-        {/* {productsList && <CardBox productsList={productsList} />} */}
-        <TableArea productsList={productsList} />
+        {productsList && <CardBox productsList={productsList} />}
+        {/* <TableArea productsList={productsList} /> */}
       </ForFixedBox>
       <SearchForm />
     </>
