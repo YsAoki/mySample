@@ -1,8 +1,8 @@
 import * as React from "react";
 
 type Props = {
-  size: number;
-  color: string;
+  size?: number;
+  color?: string;
 };
 
 const SVGComponent: React.FC<Props> = ({ size, color, ...other }) => (

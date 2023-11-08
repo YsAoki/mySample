@@ -1,27 +1,31 @@
-import React, { useEffect, useState } from "react";
-import TopLayout from "../../04templates/TopLayout";
+import React, { FC, useEffect, useState } from "react";
 import axios from "axios";
-import { error } from "console";
-import { ProductsList } from "../../../types/types";
+import TopLayout from "../../04templates/TopLayout";
 
-const Top = () => {
-  const [productsList, setProductsList] = useState<ProductsList[]>([]);
+const Top: FC = () => {
+  const [locationData, setLocationData] = useState([]);
 
   const getData = () => {
-    const url = " http://localhost:3000/products";
+    const url = "http://localhost:3000/LocationData";
     axios
       .get(url)
       .then((res) => {
-        setProductsList(res.data);
+        setLocationData(res.data);
       })
-      .catch((error) => console.log(error));
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   useEffect(() => {
     getData();
   }, []);
 
-  return <TopLayout productsList={productsList} />;
+  return (
+    <>
+      <TopLayout locationData={locationData} />
+    </>
+  );
 };
 
 export default Top;

@@ -1,26 +1,18 @@
-import React, { FC } from "react";
-import { SFlexBox, SHeader, SInner, SRegularText, STitleText } from "./style";
-import { useMediaQuery } from "../../../hooks/UseMediaQuery";
-import RouterLink from "../../01atoms/RouterLink";
+import React from 'react'
+import { SHeader, SInner, STitleText } from './style'
+import Watch from '../../02molecules/Watch.tsx'
 
-const Header: FC = () => {
-  // useMediaQueryでレスポンシブに応じた文字の表示をする。
-  const { isPc, isSp } = useMediaQuery();
-
+const Header = () => {
   return (
-    <SHeader>
-      <SInner>
-        <SFlexBox>
-          <RouterLink to={"/"}>
-            <STitleText tag="h1">MyStudy</STitleText>
-          </RouterLink>
-          {isSp && <SRegularText>SPモードなう</SRegularText>}
-          {isPc && <SRegularText>PCモードなう</SRegularText>}
-          <SRegularText>SP背景青,PCオレンジ</SRegularText>
-        </SFlexBox>
-      </SInner>
-    </SHeader>
-  );
-};
+    <>
+      <SHeader>
+        <SInner>
+          <STitleText tag='h1'>マイ制作物</STitleText>
+          <Watch />
+        </SInner>
+      </SHeader>
+    </>
+  )
+}
 
-export default Header;
+export default Header
