@@ -1,21 +1,21 @@
-// CardBox.tsx
-import React, { FC } from "react";
-import { SButton, SCardBox, SSButton } from "./style";
-import Card from "../../02molecules/Card";
-import { ProductsList } from "../../../types/types";
-import { Button } from "@mui/material";
+import React, { FC, useState } from "react";
+import { SInner } from "./style";
+import { GetLocationTypes } from "../../../types/getLocationTypes";
+import LocationCard from "../../02molecules/LocationCard";
 
 type Props = {
-  productsList: ProductsList[];
+  locationData: GetLocationTypes[];
 };
 
-const CardBox: FC<Props> = ({ productsList }) => {
+const CardBox: FC<Props> = ({ locationData }) => {
   return (
-    <SCardBox>
-      {productsList.map((val) => (
-        <Card productsData={val} key={val.id} />
-      ))}
-    </SCardBox>
+    <>
+      <SInner>
+        {locationData.map((val) => (
+          <LocationCard locationData={val} key={val.id} />
+        ))}
+      </SInner>
+    </>
   );
 };
 

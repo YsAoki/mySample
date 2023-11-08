@@ -1,36 +1,32 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
+import { GetLocationTypes } from "../../../types/getLocationTypes";
 import Header from "../../03organisms/Header";
-import ForFixedBox from "../../02molecules/ForFixedBox";
-import { ProductsList } from "../../../types/types";
 import CardBox from "../../03organisms/CardBox";
-import SearchForm from "../../03organisms/SearchForm";
-import RegularButton from "../../01atoms/RegularButton";
-import { useDispatch } from "react-redux";
-import { openSearchModal } from "../../../store/viewModeSlice";
-import TableArea from "../../03organisms/TableArea";
+import Modal from "../../03organisms/Modal";
 
 type Props = {
-  productsList: ProductsList[];
+  locationData: GetLocationTypes[];
 };
 
-const TopLayout: FC<Props> = ({ productsList }) => {
-  const dispatch = useDispatch();
-
-  const openSearchModalEvent = () => {
-    dispatch(openSearchModal());
+const TopLayout: FC<Props> = ({ locationData }) => {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(!modalOpen);
   };
 
   return (
     <>
+      {modalOpen && (
+        <Modal closeModal={closeModal}>
+          <p>モーダル</p>
+        </Modal>
+      )}
       <Header />
-      <ForFixedBox>
-        <RegularButton onClick={openSearchModalEvent}>
-          絞り込み画面を開く
-        </RegularButton>
-        {productsList && <CardBox productsList={productsList} />}
-        {/* <TableArea productsList={productsList} /> */}
-      </ForFixedBox>
-      <SearchForm />
+      <button onClick={openModal}>絞り込みを開く</button>
+      <CardBox locationData={locationData} />
     </>
   );
 };

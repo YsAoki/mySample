@@ -6,17 +6,12 @@ export const theme = {
     // pc: '1024px',
   },
   color: {
-    mainColor: "#1DA1F2",
-    subColor: "#F26939",
-    fontColor: "#4d5156",
-    iconColor: "#1877f2",
+    mainBackColor: "#1877f2",
+    fontColor: "#333333",
     borderColor: "#39475D",
   },
-  innerWidth: {
-    maxWidth: "1200px",
+  style: {
+    shadow: "-3px 4px 7px 0px #dbcccc",
+    transition: "all 0.8s",
   },
-  size: {
-    headerHeightSp: "32px",
-    headerHeightPc: "44px",
-  }
 }
