@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Top from "../Top";
+import ImageAddPage from "../ImageAddPage";
 
 const ReactRouter = () => {
   return (
@@ -8,6 +9,7 @@ const ReactRouter = () => {
       <Route path="/" element={<Top />}>
         <Route path=":id" />
       </Route>
+      <Route path="/add" element={<ImageAddPage />}></Route>
     </Routes>
   );
 };
