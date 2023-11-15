@@ -7,6 +7,17 @@ const ImageUpload: React.FC = () => {
   const [productName, setProductName] = useState('');
   const [productPrice, setProductPrice] = useState('');
 
+//   const date = new Date();
+
+// // 年、月、日を取得
+// const year = date.getFullYear();
+// const month = date.getMonth() + 1; // 月は0から始まるので1を足す
+// const day = date.getDate();
+
+// // YYYY-MM-DD形式の文字列に変換
+// const dateString = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+
+
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     // ファイル選択処理
   };
