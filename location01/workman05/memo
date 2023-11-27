@@ -1,0 +1,38 @@
+react-router-domの使い方
+
+クエリパラメータとパスパラメータの違いについて
+①https://zenn.dev/search
+②https://zenn.dev/search?q=Laravel
+
+？があるかどうかの違い。
+?が無い方→ パスパラメータ
+パスパラメータって？
+特定の画面を表示する場合に使う。
+パスパラメータを使用したいときはパスパラメータを使う。
+
+
+？がある方→クエリパラメータ
+クエリパラメータって？
+特定のもの（画面など）に対して条件を加える場合に必要になる。
+クエリパラメータを取得したい場合はuseSearchParamsを使う。
+サンプルコード
+https://Anime.co.jp/sales/1/members?id=3 ← このid=3がクエリパラメータ。
+
+usenavigateを使って、クエリパラメータを渡したい場合。
+  const onClickNav = () => {
+    navigate(`/checker2/?id=${id}`);
+  };
+
+useSearchParamsを使って、クエリパラメータを取得したい場合。
+  const [searchParams] = useSearchParams();
+  const id = searchParams.get('id'); 
+
+
+ローカルストレージに、セットする方法
+localStorage.setItem('myKey', 'myValue');
+これで、ローカルストレージにmykey: myvalueが保持されるようになる
+
+const value = localStorage.getItem('myKey');
+ローカルストレージからmykeyを取得する。
+
+備考として

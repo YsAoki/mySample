@@ -11,9 +11,8 @@ type Props = {
   locationData: GetLocationTypes;
 };
 
-
 const LocationCard: FC<Props> = ({ locationData }) => {
-  console.log(convertKindsNumberForString(locationData.kinds))
+  
   return (
     <>
       <SInner>
