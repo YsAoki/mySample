@@ -1,31 +1,34 @@
-import React, { FC, useEffect, useState } from "react";
-import axios from "axios";
-import TopLayout from "../../04templates/TopLayout";
+// import React, { useState, useEffect } from 'react';
 
-const Top: FC = () => {
-  const [locationData, setLocationData] = useState([]);
+// const DetailScreen = ({ imageUrl }) => {
+//   const [currentImageUrl, setCurrentImageUrl] = useState(imageUrl);
+//   const [imageExists, setImageExists] = useState(true);
 
-  const getData = () => {
-    const url = "http://localhost:3000/LocationData";
-    axios
-      .get(url)
-      .then((res) => {
-        setLocationData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+//   useEffect(() => {
+//     const img = new Image();
+//     img.onload = () => setImageExists(true);
+//     img.onerror = () => setImageExists(false);
 
-  useEffect(() => {
-    getData();
-  }, []);
+//     // タイムスタンプを追加してキャッシュを回避
+//     const timestamp = new Date().getTime();
+//     img.src = `${imageUrl}?t=${timestamp}`;
 
-  return (
-    <>
-      <TopLayout locationData={locationData} />
-    </>
-  );
-};
+//     setCurrentImageUrl(`${imageUrl}?t=${timestamp}`);
+//   }, [imageUrl]);
 
-export default Top;
+//   return (
+//     <div>
+//       {imageExists ? (
+//         <img src={currentImageUrl} alt="詳細画像" />
+//       ) : (
+//         <NoImageComponent />
+//       )}
+//     </div>
+//   );
+// };
+
+// const NoImageComponent = () => {
+//   return <div>NO IMAGE</div>;
+// };
+
+// export default DetailScreen;
